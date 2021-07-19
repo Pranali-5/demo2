@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        width: 50%;
+    }
+
+    #data {
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-gap: 5%;
+        margin-left: 20%;
+    }
+
+    input {
+        margin-left: 15%;
+    }
+    
+
+    #btn1 {
+        margin-top: 3%;
+        margin-left: 20%;
+        margin-bottom: 5%;
+    }
+</style>
+
+<body>
+    <h1>Online Jewellery Store</h1>
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Name" />
+        <input type="text" id="price" placeholder="Price" />
+        <input type="text" id="img" placeholder="Image" />
+    </form>
+    <select>
+        <option>Add filters</option>
+        <option>filter by brand</option>
+        <option onclick="HtoL()">filter by High to Low price</option>
+        <option>filter by Low to High price</option>
+    </select>
+    <button id="btn1" onclick="jewellery()">Add Product</button>
+    <button onclick="showCart()">My Cart</button>
+
+    <button onclick="HtoL()">Sort by High to Low</button>
+    <button onclick="LtoH()">Sort by High to Low</button>
+
+    <div id="products"></div>
+
+    <div id="data"></div>
+</body>
+
+</html>
+<script src="products.js"></script>
